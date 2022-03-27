@@ -4,7 +4,7 @@ import { UserEntity } from './entities/user.entity';
 import { config } from 'dotenv';
 import { resolve } from 'path';
 import { AdvertRepository } from './repository/advert.repository';
-import { AbstractPolymorphicRepository } from '../';
+import { AbstractPolymorphicRepository } from '../src';
 
 describe('AbstractPolymorphicRepository', () => {
   let connection: Connection;
@@ -14,8 +14,10 @@ describe('AbstractPolymorphicRepository', () => {
 
   beforeAll(async () => {
     config({
-      path: resolve(__dirname, '.', '..', '..', '.env'),
+      path: resolve(__dirname, '..', '.env'),
     });
+
+    console.log('process.env', process.env);
 
     connection = await createConnection({
       type: 'mysql',

@@ -1,9 +1,9 @@
 import { Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { PolymorphicChildren } from '../../../dist';
+import { PolymorphicChildren } from '../../dist';
 import { AdvertEntity } from './advert.entity';
 
-@Entity('merchants')
-export class MerchantEntity {
+@Entity('users')
+export class UserEntity {
   @PrimaryGeneratedColumn()
   id: number;
 

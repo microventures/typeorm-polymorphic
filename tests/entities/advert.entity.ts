@@ -1,5 +1,5 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { PolymorphicParent } from '../../../dist';
+import { PolymorphicParent } from '../../dist';
 import { MerchantEntity } from './merchant.entity';
 import { UserEntity } from './user.entity';
 
