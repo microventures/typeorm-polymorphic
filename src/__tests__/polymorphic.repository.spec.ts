@@ -23,7 +23,7 @@ describe('AbstractPolymorphicRepository', () => {
       port: parseInt(process.env.TYPEORM_PORT, 10),
       username: process.env.TYPEORM_USERNAME,
       password: process.env.TYPEORM_PASSWORD,
-      entities: ['./*/**/*.entity.ts'],
+      entities: [process.env.TYPEORM_ENTITIES],
       synchronize: process.env.TYPEORM_SYNCHRONIZE === 'true',
       database: process.env.TYPEORM_DATABASE,
     });

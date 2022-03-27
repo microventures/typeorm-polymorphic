@@ -52,14 +52,15 @@
     ],
     "rootDir": "src",
     "testRegex": ".spec.ts$",
-    "transform": {
-      "^.+\\.(t|j)s$": "ts-jest"
-    },
+    "preset": "ts-jest",
     "coverageDirectory": "../coverage"
   },
   "husky": {
     "hooks": {
       "pre-commit": "yarn format"
     }
+  },
+  "ts-jest": {
+    "tsConfig": "tsconfig.spec.json"
   }
 }
